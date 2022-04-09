@@ -1,0 +1,208 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>permit</groupId>
+    <artifactId>permit</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+    
+         <!-- <dependencyManagement>
+    	<dependencies>
+    		<dependency>
+    			<groupId>org.jboss.arquillian</groupId>
+    			<artifactId>arquillian-bom</artifactId>
+    			<version>1.4.0.Final</version>
+    			<scope>import</scope>
+    			<type>pom</type>
+    		</dependency>
+    	</dependencies>
+    </dependencyManagement> -->
+    <repositories>
+    	<repository>
+    		<id>maven2-repository.java.net</id>
+    		<name>Java.net Repository for Maven</name>
+    		<url>http://download.java.net/maven/2/</url>
+    		<layout>default</layout>
+    	</repository>
+    </repositories>
+    
+	<properties>
+		 <!-- <jersey2.version>3.0.2</jersey2.version> -->
+		 <jersey.version>2.35</jersey.version>
+         <jaxrs.version>2.0.1</jaxrs.version>
+	
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
+    
+    <dependencies>    
+    	<dependency>
+    		<groupId>org.apache.derby</groupId>
+    		<artifactId>derbyclient</artifactId>
+    		<!-- <version>9.0</version> -->
+    		<version>10.14.2.0</version>
+    	</dependency>
+    	        
+<!--         <dependency>
+        	<groupId>fish.payara.extras</groupId>
+        	<artifactId>payara-embedded-all</artifactId>
+        	<version>5.182</version>
+        	<scope>test</scope>
+        </dependency> -->
+        
+         <dependency>
+        	<groupId>org.apache.shiro</groupId>
+        	<artifactId>shiro-core</artifactId>
+        	<version>1.7.1</version>
+        </dependency>
+        
+        <dependency>
+        	<groupId>org.slf4j</groupId>
+        	<artifactId>slf4j-simple</artifactId>
+        	<version>2.0.0-alpha1</version>
+        	<scope>test</scope>
+        </dependency> 
+        
+       <!--  <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency> -->
+        
+         <dependency>
+            <groupId>com.airhacks</groupId>
+            <artifactId>jaxrs-cors</artifactId>
+            <version>0.0.2</version>
+            <scope>compile</scope>
+        </dependency>
+    
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.microprofile</groupId>
+            <artifactId>microprofile</artifactId>
+            <version>2.0.1</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+        
+                <!--java library for creating and verifying tokens which is used for our authorization tokens  -->
+        <dependency>
+        	<groupId>io.jsonwebtoken</groupId>
+        	<artifactId>jjwt</artifactId>
+        	<version>0.9.0</version>
+        </dependency>
+        <!-- jeresy dependencies for file upload and download (theres also a resteasy method)-->
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-multipart -->
+		
+		
+		<!-- hide section temp 09/13/2021 -->
+		
+ 		<dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>${jaxrs.version}</version>
+        </dependency>
+        
+         <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        
+        
+        <!-- to here -->
+		
+<!--		<dependency>
+		    <groupId>org.glassfish.jersey.media</groupId>
+		    <artifactId>jersey-media-multipart</artifactId>
+		    <version>3.0.2</version>
+		</dependency>
+         <dependency>
+        	<groupId>com.sun.jersey</groupId>
+        	<artifactId>jersey-server</artifactId>
+        	<version>1.8</version>
+        </dependency> 
+        
+         <dependency>
+            <groupId>com.sun.jersey.contribs</groupId>
+            <artifactId>jersey-multipart</artifactId>
+            <version>1.8</version>
+        </dependency> -->
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-multipart -->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-multipart</artifactId>
+            <version>2.35</version>
+        </dependency>
+        <!-- 2.32 is also a version -->
+<!--         <dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-common</artifactId>
+			<version>${jersey2.version}</version>
+		</dependency> -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20210307</version>
+		</dependency>
+        
+        
+    </dependencies>
+    <build>
+        <finalName>permit</finalName>
+        
+        <plugins>
+        	<plugin>
+        		<artifactId>maven-compiler-plugin</artifactId>
+        		<!-- <version>2.3.2</version> -->   
+        		<configuration>
+        			<source>${maven.compiler.source}</source>
+        			<target>${maven.compiler.target}</target>
+        		</configuration>     		
+        	</plugin>
+<!--           	<plugin>
+        		<artifactId>maven-surefire-plugin</artifactId>
+        		<version>2.22.0</version>
+         		<configuration>
+                    	<systemProperties>
+                        	<arquillian.launch>glassfish-embedded </arquillian.launch>
+                    	</systemProperties>
+                </configuration>
+        	</plugin>  --> 
+        </plugins>
+        
+<!--          <testResources>
+        	<testResource>
+        		<directory>src/test/resources</directory>
+        	</testResource>
+        </testResources> -->
+    </build>
+
+</project>
+
+
+
+
+
+
+
+
+

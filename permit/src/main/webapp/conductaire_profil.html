@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Cotent-Type" content="text/html" charset="UTF-8">
+		<title>Profil Conductaire</title>
+		<script type = "text/javascript" src="js/sessionTransfer.js"></script>
+        <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<h1 style="text-align: center;">Profile</h1>
+		<table width="100%">
+			<tr>
+				<th><a target="_self" href="login.html">Login</a></th>
+				<th><a target="_self" href="nouveau_conductaire.html">Nouveu Conductaire</a></th>
+				<th><a target="_self" href="pratique_exam.html">Resultat Pratique</a></th>
+				<th><a target="_self" href="code_exam.html">Resultat Code</a></th>
+			</tr>
+		</table>
+		<div id="cond_profil" onload="conductaireProfil()"></div>
+		<form action="" style="text-align: center;">
+		<!--  todo get default profile image and display image -->
+			<h5>image profile</h5>
+			<input type="file" id="imgPath" paceholder="Profile Image"><br/>
+			<input type="submit" value="upload" id="uploadImg">
+			<div><input type="button" id="cond_profil" value="Load Data" /></div>
+<!--  			<h5>Carte Id</h5>
+			<input type="file" id="cartIdPath" paceholder="Carte Id"><br/>
+			<input type="submit"  value="upload" id="uploadIdImg"> -->
+		</form>
+		
+		<!-- <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script> -->
+		<script type = "text/javascript" src = "js/htmlModder.js"> </script>
+		<script type = "text/javascript" src = "js/restAccess.js"> </script>
+		<script type = "text/javascript" src = "js/profil_service.js"> </script>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				conductaireProfil();
+			}
+		</script>
+	</body>
+</html>

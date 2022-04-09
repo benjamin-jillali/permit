@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Cotent-Type" content="text/html" charset="UTF-8">
+		<title>Exam Pratique</title>
+		<script type = "text/javascript" src="js/sessionTransfer.js"></script>
+		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<h1 style="text-align: center;">Teste Pratique</h1>
+		<table>
+			<tr>
+				<th><a target="_self" href="login.html">Login</a></th>
+				<th><a target="_self" href="conductaire_profil.html">Conductaire Profil</a></th>
+				<th><a target="_self" href="nouveau_conductaire.html">Nouveu Conductaire</a></th>
+				<th><a target="_self" href="code_exam.html">Resultat Code</a></th>
+			</tr>
+		</table>
+		<h1>Login</h1>
+		<div style="text-align: center;">
+			<form action="">
+				<div id="pratique_resultat"></div><br/>
+				<h5>Note obtenue pour le test pratique</h5>
+				<input type="text" id="prat_note" paceholder="note"><br/>
+				<h5>Email du conductaire</h5>
+				<input type="text" id="emailCond" paceholder="bla@bla.bla"><br/>
+				<div><input type="button" id="prat_ex_cree" value="Load Data" /></div>
+			</form>
+		</div>
+		<script type = "text/javascript" src = "js/htmlModder.js"> </script>
+		<script type = "text/javascript" src = "js/restAccess.js"> </script>
+		<script type = "text/javascript" src = "js/profil_service.js"> </script>
+		<!-- <script type="text/javascript" src="js/socket.js"></script> -->
+	</body>
+</html>

@@ -1,0 +1,75 @@
+partie teste pratique 
+entity
+
+point breakdown using hashmap of type float
+categorie: connaitre vegic
+installer e-3
+verifie e-3
+commande e-3
+
+cata: la route
+info e-3
+circonstances e-3
+reglementation e-3
+
+partager route
+comminiquer e-3
+partager e-3
+espaces e-3
+
+
+sous categorie tous
+sous tot 0-1
+cond_economique
+courtoisie
+
+autonomie
+analyse 0, 0.5, 1
+adapt_situ 0, 0.5, 1
+autonome 0, 0.5, 1
+
+
+CODE STRUCTURE
+2 tables
+1 for code exam to send to client
+2 code results stored in client profile
+
+primary elements 
+questions, possible answers, actual answer, question image, question responses from client
+
+possible method hashmap for pAnsw images and actAnsw with matching keys across hasmaps program randomly selects which one to grab and send to client
+backend checks results of client test in service layer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
